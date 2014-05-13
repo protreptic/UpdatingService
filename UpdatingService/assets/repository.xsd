@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/repository"
+	xmlns:tns="http://www.example.org/repository" elementFormDefault="qualified">
+
+    <complexType name="repositoryType"></complexType>
+
+    <complexType name="entryType">
+    	<sequence>
+			<element name="package" type="xs:string" nillable="false" minOccurs="1" maxOccurs="1" />
+			<element name="versionCode" type="xs:integer" nillable="false" minOccurs="1" maxOccurs="1" />
+			<element name="versionName" type="xs:string"	nillable="false" minOccurs="1" maxOccurs="1" />
+			<element name="applicationName" type="xs:string"	minOccurs="0" maxOccurs="1" />
+			<element name="description" type="xs:string"	minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+    <complexType name="entryListType"></complexType>
+
+    <element name="repository" type="tns:repositoryType"></element>
+</schema>
