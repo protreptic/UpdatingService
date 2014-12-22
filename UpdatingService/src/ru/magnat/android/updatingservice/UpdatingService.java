@@ -1,6 +1,6 @@
-package ru.magnat.android.service.update;
+package ru.magnat.android.updatingservice;
 
-import ru.magnat.android.service.update.aidl.IUpdatingService;
+import ru.magnat.android.updatingservice.aidl.IUpdatingService;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class UpdatingService extends Service {
 
-	public static String TAG = "UpdatingService";
+	public static final String TAG = "UpdatingService";
 	
 	public static class StartUpReceiver extends BroadcastReceiver {
 
@@ -25,8 +25,27 @@ public class UpdatingService extends Service {
 	private IUpdatingService.Stub mBinder = new IUpdatingService.Stub() {
 
 		@Override
-		public String echo(String message) throws RemoteException {
-			return message;
+		public void update() throws RemoteException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void upgrade() throws RemoteException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void install() throws RemoteException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void remove() throws RemoteException {
+			// TODO Auto-generated method stub
+			
 		}
 		
 	};
